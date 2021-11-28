@@ -1,0 +1,88 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--lynx-white);
+  color: var(--black);
+}
+
+header ul li {
+  display: inline-block;
+  float: right;
+  margin-left: 30px;
+}
+header ul li a {
+  text-decoration: none;
+}
+header ul li a:hover {
+  color: pink;
+}
+
+section {
+  background-color: var(--utah-sky);
+  margin: 16px;
+  padding: 16px;
+}
+
+/* COLORS */
+section#color {
+  background-color: white;
+  border: 1px solid var(--purple-plum);
+}
+#color ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  padding: 14px;
+}
+#color ul li.parent-bg-color {
+  background-color: var(--lynx-white);
+}
+#color ul li.bg-color {
+  background-color: var(--utah-sky);
+}
+#color ul li.border-color {
+  background-color: var(--purple-plum);
+  color: white;
+}
+#color ul li.text-color {
+  background-color: var(--black);
+  color: white;
+}
+
+/* FONTS */
+#fonts ul li.bold {
+  font-weight: bold;
+}
+#fonts ul li.italic {
+  font-style: italic;
+}
+#fonts #roboto,
+#fonts #roboto ~ ul li {
+  font-family: 'Roboto', sans-serif;
+}
+#fonts #open-sans,
+#fonts #open-sans ~ ul li {
+  font-family: 'OpenSans', sans-serif;
+}
+#fonts #noto-sans-jp,
+#fonts #noto-sans-jp ~ ul li {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* TEXT STYLES */
+#text-styles h1 {
+  font-weight: 700;
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+}
+#text-styles h2 {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+#text-styles p {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
