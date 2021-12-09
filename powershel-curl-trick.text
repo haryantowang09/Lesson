@@ -1,0 +1,27 @@
+$headers = @{
+ "Content-Type" = "application/json"
+}
+
+
+$body = @{
+	id = 4
+	title = "The Modern Sound of Betty Carter"
+	artist = "Betty Carter"
+	price = 49.99
+}
+
+$params = @{
+    Uri         = 'http://localhost:8080/albums'
+    Method      = 'POST'
+    Body        = $body
+    ContentType = 'application/json'
+}
+
+Invoke-RestMethod @params
+
+Common style
+
+Invoke-RestMethod -Uri http://localhost:8080/albums -Method Post -Headers $headers -Body $body
+
+Or 
+curl -H "Content-Type: application/json" -X POST http://localhost:8080/albums -d "{ id: 1 }"
