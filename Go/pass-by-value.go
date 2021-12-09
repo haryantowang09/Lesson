@@ -16,7 +16,7 @@ func  doubleThat(count *float64) {
 
 func tryingZero(trial *int) {
   if (trial === 0) {
-
+  	
   }
 }
 
