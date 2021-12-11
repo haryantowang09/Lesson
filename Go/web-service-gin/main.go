@@ -22,7 +22,6 @@ var albums = []album{
 
 func main() {
 	router := gin.Default()
-
 	router.GET("/albums", getAlbums)
 	router.GET("/albums/:id", getAlbumByID)
 	router.POST("/albums", postAlbums)
@@ -35,18 +34,20 @@ func getAlbums(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, albums)
 }
 
+// NOTE: be it from postman it still for 400, not sure why
 // postAlbums adds an album from JSON received in the request body.
 func postAlbums(c *gin.Context) {
-	var newAlbum album
+    var newAlbum album
 
-	// Call BindJSON to bind the received JSON to newAlbum.
-	if err := c.BindJSON(&newAlbum); err != nil {
-		return
-	}
+    // Call BindJSON to bind the received JSON to
+    // newAlbum.
+    if err := c.BindJSON(&newAlbum); err != nil {
+        return
+    }
 
-	// Add the new album to the slice.
-	albums = append(albums, newAlbum)
-	c.IndentedJSON(http.StatusCreated, newAlbum)
+    // Add the new album to the slice.
+    albums = append(albums, newAlbum)
+    c.IndentedJSON(http.StatusCreated, newAlbum)
 }
 
 // getAlbumByID locates the album whose ID value matches the id
