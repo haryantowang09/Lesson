@@ -34,7 +34,7 @@ func getAlbums(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, albums)
 }
 
-// NOTE: be it from postman it still for 400, not sure why
+// NOTE: not working
 // postAlbums adds an album from JSON received in the request body.
 func postAlbums(c *gin.Context) {
     var newAlbum album
