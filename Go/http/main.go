@@ -29,7 +29,7 @@ func main() {
 		title := vars["title"]
 		page := vars["page"]
 
-		fmt.FPrintf(w, "You've requested the book: %s and page %s\n", title, page)
+		fmt.Fprintf(w, "You've requested the book: %s and page %s\n", title, page)
 	})
 
 	// methods

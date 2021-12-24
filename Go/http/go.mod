@@ -1,4 +1,4 @@
-module http-server
+module Lesson/Go/http
 
 go 1.17
 
